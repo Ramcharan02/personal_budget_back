@@ -26,11 +26,9 @@ const expense = require("./models/expense");
 const dbConnectionString = `${process.env.DATABASE_CONNECTION_STRING}/${process.env.DATABASE_NAME}`;
 
 mongoose
-  .connect(dbConnectionString, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-  })
+  .connect(`${process.env.DATABASE_CONNECTION_STRING}personal_budget_app`,{
+  }
+    )
   .then(() => {
     app.listen(port, host, () => {
       console.log(`Server is running at port ${port}`);
@@ -44,7 +42,7 @@ app.use(
     resave: false,
     saveUninitialized: false,
     store: MongoStore.create({
-      mongoUrl: dbConnectionString,
+      mongoUrl: `${process.env.DATABASE_CONNECTION_STRING}personal_budget_app`,
     }),
     cookie: { maxAge: 60 * 60 * 1000 },
   })
