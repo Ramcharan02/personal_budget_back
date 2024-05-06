@@ -27,10 +27,6 @@ const dbConnectionString = `${process.env.DATABASE_CONNECTION_STRING}/${process.
 
 mongoose
   .connect(`${process.env.DATABASE_CONNECTION_STRING}personal_budget_app`,{
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify:false,
-    useCreateIndex:true,
   }
     )
   .then(() => {
