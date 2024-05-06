@@ -24,5 +24,10 @@
   },
   "engines": {
     "node": "20.9"
-  }
+  },
+    "start": "node server.js",
+    "build": "react-scripts build",
+    "postbuild": "move build files to server directory or serve directly"
 }
+
+
