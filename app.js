@@ -7,7 +7,7 @@ const MongoStore = require("connect-mongo");
 
 const app = express();
 const port = process.env.PORT || 3000; 
-const host = '100.20.92.101';
+const host = "localhost";
 
 const cors = require("cors");
 
