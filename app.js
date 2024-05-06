@@ -3,7 +3,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
-import { ConnectionState } from "@livekit/components-react";
+const { ConnectionState } = require("@livekit/components-react");
+
 
 const app = express();
 const port = process.env.PORT || 3000; 
