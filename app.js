@@ -5,8 +5,8 @@ const session = require("express-session");
 const MongoStore = require("connect-mongo");
 
 const app = express();
-const port = process.env.PORT; 
-const host = "localhost";
+const port = 127.0.0.1; 
+const host = "8080";
 
 const cors = require("cors");
 
