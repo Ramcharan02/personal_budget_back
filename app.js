@@ -55,3 +55,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/budget", budgetRoutes);
 app.use("/api/v1/expense", expenseRoutes);
+
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
+});
